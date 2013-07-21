@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>Durandal Kendo Mobile</title>
+    <script src="lib/jquery-2.0.0.min.js"></script>
+    <script src="css/telerik/js/kendo.mobile.min.js"></script>
+    <link href="css/telerik/styles/kendo.mobile.flat.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div data-role="layout" data-id="mobile-tabstrip">
+        <header data-role="header">
+            <div data-role="navbar">Durandal/Kendo Mobile + PhoneGap</div>
+        </header>
+
+        <div data-role="footer">
+            <div data-role="tabstrip">
+                <a>Home</a>
+                <a>About</a>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="view" id="tabstrip-profile" data-title="View Name" data-layout="mobile-tabstrip">
+        <ul data-role="listview" data-style="inset" data-type="group">
+            <li>
+                <ul>
+                    <li>
+                        <h2><span>Bla bla</span></h2>
+                    </li>
+                </ul>
+            </li>
+            <li>Languages
+                <ul>
+                    <li>English</li>
+                    <li>Spanish</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        var app = new kendo.mobile.Application($(document.body), {
+            skin: "flat"
+        });
+    </script>
+</body>
+</html>
